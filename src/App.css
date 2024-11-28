@@ -1,190 +1,189 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #282c34;
-    color: white;
-  }
-  
-  .logo img {
-    height: 40px;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-item {
-    position: relative;
-    margin-left: 20px;
-  }
-  
-  .nav-item button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .nav-item button:hover {
-    text-decoration: underline;
-  }
-  
-  .dropdown {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    background-color: #fff;
-    color: #000;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 1000;
-  }
-  
-  .dropdown ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: max-content;
-  }
-  
-  .dropdown ul li {
-    margin: 5px 0;
-    border: 1px solid rgb(177, 173, 173);
-  }
-  
-  .dropdown p {
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: column;
-    }
-  
-    .nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav-item {
-      margin: 10px 0;
-    }
-  }
-  
-  .chatbox {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: white;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav-item button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-item button:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: max-content;
+}
+
+.dropdown ul li {
+  margin: 5px 0;
+  border: 1px solid rgb(177, 173, 173);
+}
+
+.dropdown p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header {
     flex-direction: column;
-    justify-content: space-between;
-    margin: 30px 45px;
-    background-color: white;
-    position: relative;
   }
-  
-  .chatbox-header {
-    background-color: #282c34;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
+  .nav-item {
+    margin: 10px 0;
+  }
+}
+
+.chatbox {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 45px;
+  background-color: white;
+  position: relative;
+}
+
+.chatbox-header {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.chatbox-messages {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.chatbox-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.chatbox-message.bot {
+  background-color: #f1f1f1;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.chatbox-message.user {
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+  align-self: flex-end;
+  width: fit-content;
+}
+
+.chatbox-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chatbox-input input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 0 0 0 5px;
+  outline: none;
+}
+
+.chatbox-input button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 0 0 5px 0;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 1px;
+}
+
+.chatbox-input button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .chatbox {
+    max-width: 90%;
+    height: 300px;
+    margin: 20px auto;
+  }
+
   .chatbox-messages {
-    padding: 10px;
-    flex-grow: 1;
-    overflow-y: auto;
-    max-height: 300px;
+    max-height: 200px;
   }
-  
-  .chatbox-message {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 75%;
-    word-wrap: break-word;
-  }
-  
-  .chatbox-message.bot {
-    background-color: #f1f1f1;
-    text-align: left;
-    align-self: flex-start;
-  }
-  
-  .chatbox-message.user {
-    background-color: #007bff;
-    color: white;
-    text-align: right;
-    align-self: flex-end;
-    width: fit-content;
-  }
-  
-  .chatbox-input {
-    display: flex;
-    border-top: 1px solid #ccc;
-  }
-  
-  .chatbox-input input {
-    flex-grow: 1;
-    border: none;
-    padding: 10px;
-    border-radius: 0 0 0 5px;
-    outline: none;
-  }
-  
+
   .chatbox-input button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 0 0 5px 0;
-    cursor: pointer;
-    width: 30%;
-    margin-left: 1px;
+    width: 25%;
   }
-  
-  .chatbox-input button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .chatbox {
-      max-width: 90%;
-      height: 300px;
-      margin: 20px auto;
-    }
-  
-    .chatbox-messages {
-      max-height: 200px;
-    }
-  
-    .chatbox-input button {
-      width: 25%;
-    }
-  }
-  
+}
+
+.footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
   .footer {
-    background-color: #282c34;
-    padding: 10px;
-    color: white;
-    position: fixed;
     width: 100%;
-    bottom: 0;
-    text-align: center;
   }
-  
-  @media (max-width: 768px) {
-    .footer {
-      width: 100%;
-    }
-  }
-  
+}
