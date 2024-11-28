@@ -1,0 +1,1 @@
+export const LOG_URL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxj4dmj9EseFVeUOyNUmbWyZ8WQ9WRaiQeGQ&s";
