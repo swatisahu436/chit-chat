@@ -161,8 +161,13 @@
   @media (max-width: 768px) {
     .chatbox {
       max-width: 80%;
-      height: 90%;
+      flex-direction: column;
+       max-height: 70%;
     }
+    .chatbox-input button{
+       max-width: 60%;
+    }
+    
   }
   
   .footer {
@@ -173,5 +178,11 @@
     width: 100%;
     bottom: 0;
     text-align: center;
+  }
+
+  @media (max-width: 768px){
+    .footer{
+        width: 100%;
+    }
   }
   
